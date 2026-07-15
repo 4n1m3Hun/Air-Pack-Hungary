@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Pack Hungary</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="res.css">
+    <!---Elemző-->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8BWQ1MYFTR"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-8BWQ1MYFTR');
+    </script>
+
+</head>
+
+<body>
+    <header class="hero" id="home">
+        <nav class="navbar">
+
+            <ul id="navMenu">
+                <li><a href="#home" data-lang="home">Főoldal</a></li>
+                <li><a href="#about" data-lang="about">Rólam</a></li>
+                <li><a href="#products" data-lang="products">Termékek</a></li>
+                <li><a href="#contact" data-lang="contact">Kapcsolat</a></li>
+            </ul>
+
+            <div class="nav-right">
+
+                <div class="language-switch">
+                    <button onclick="changeLanguage('hu')" class="lang-btn active">HU</button>
+                    <button onclick="changeLanguage('en')" class="lang-btn">EN</button>
+                </div>
+
+                <button class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+            </div>
+
+        </nav>
+        <div class="overlay"></div>
+        <svg class="wave" viewBox="0 0 1440 180" preserveAspectRatio="none">
+            <path fill="#fdf8f2" d="M0,96
+                C280,180
+                520,0
+                780,90
+                C1080,180
+                1240,180
+                1440,110
+                L1440,180
+                L0,180
+                Z">
+            </path>
+        </svg>
+    </header>
+    <section class="products" id="products">
+        <span class="sectionMini" data-lang="kinalat">
+            Kínálat
+        </span>
+        <h2 data-lang="termekek">Termékek</h2>
+        <div class="cards">
+            <article class="card">
+                <img src="product3.jpg" alt="Kraft csomagolópapír" class="card-img-1">
+                <div class="card-content">
+                    <span class="category">
+                        Air Pack Hungary
+                    </span>
+                    <h3 data-lang="webaruhazaknak">Webáruházaknak</h3>
+                    <p data-lang="p1p1">
+                        80 g/m² barna kraft csomagolópapír
+                        napi csomagolási feladatokhoz.
+                    </p>
+                    <ul>
+                        <li data-lang="p1l1">30 cm szélesség</li>
+                        <li data-lang="p1l2">50 m / tekercs</li>
+                        <li data-lang="p1l3">Saját magyar gyártás</li>
+                    </ul>
+                    <button class="details-btn" data-product="1" data-lang="reszletek">
+                        Részletek
+                    </button>
+                </div>
+            </article>
+            <article class="card">
+                <img src="product2.jpg" alt="Virágboltoknak" class="card-img-2">
+                <div class="card-content">
+                    <span class="category">
+                        Air Pack Hungary
+                    </span>
+                    <h3 data-lang="c2h1">Virágboltoknak</h3>
+                    <p data-lang="c2p1">
+                        Papír buborékcsomagoló lapok
+                        virágcsokrok és dekorációk biztonságos csomagolásához.
+                    </p>
+                    <ul>
+                        <li data-lang="c2l1">30 × 40 cm lapméret</li>
+                        <li data-lang="c2l2">125 lap / doboz</li>
+                        <li data-lang="p1l3">Saját magyar gyártás</li>
+                    </ul>
+                    <button class="details-btn" data-product="2" data-lang="reszletek">
+                        Részletek
+                    </button>
+                </div>
+            </article>
+            <article class="card">
+                <img src="product1.jpg" alt="Üvegpalack csomagolás" class="card-img-3">
+                <div class="card-content">
+                    <span class="category">
+                        Air Pack Hungary
+                    </span>
+                    <h3 data-lang="c3h1">Üvegpalack csomagolás</h3>
+                    <p data-lang="c3p1">
+                        Biztonságos csomagolás
+                        0,75 literes üvegpalackokhoz.<br><br>
+                    </p>
+                    <br>
+                    <ul>
+                        <li data-lang="c3l1">Kiváló ütésvédelem</li>
+                        <li data-lang="c3l2">Saját gyártás</li>
+                        <li data-lang="p1l3">Gyors használat</li>
+                    </ul>
+                    <button class="details-btn" data-product="3" data-lang="reszletek">
+                        Részletek
+                    </button>
+                </div>
+            </article>
+        </div>
+    </section>
+    <div class="modal" id="productModal">
+        <div class="modal-box">
+            <button class="close-modal">
+                &times;
+            </button>
+            <div class="modal-grid">
+                <div class="modal-image">
+                    <img id="modalImage" src="" alt="">
+                </div>
+                <div class="modal-content">
+                    <span id="modalCategory"></span>
+                    <h2 id="modalTitle"></h2>
+                    <p id="modalDescription"></p>
+                    <div class="modal-columns">
+                        <div>
+                            <h4 id="popleft"></h4>
+                            <ul id="modalUses">
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 id="popright"></h4>
+                            <ul id="modalBenefits">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="about" id="about">
+        <div class="aboutText">
+            <span class="sectionMini" data-lang="aboutmini">
+                BEMUTATKOZÁS
+            </span>
+            <h2 data-lang="abouth2">
+                Az Air Pack Hungary Kft.-ről
+            </h2>
+            <p data-lang="aboutp1">
+                Üdvözöljük az Air Pack Hungary Kft. weboldalán! Magyarország egyetlen
+                buborékpapír-gyártó vállalataként innovatív és környezetbarát
+                csomagolási megoldásokat kínálunk partnereink számára.
+            </p>
+            <p data-lang="aboutp2">
+                Termékeink kiváló minőségű, 80 g/m²-es barna kraft
+                alappapírból készülnek. A speciális gyártási technológiának
+                köszönhetően a papír rugalmas, ütéscsillapító szerkezetet kap,
+                amely megbízható védelmet biztosít a csomagolt termékek számára,
+                miközben környezetbarát alternatívát jelent a hagyományos
+                műanyag buborékfóliával szemben.
+            </p>
+            <p data-lang="aboutp3">
+                Célunk, hogy hazai gyártóként gyors, megbízható kiszolgálást és
+                állandó, magas minőséget biztosítsunk ügyfeleinknek. Büszkék
+                vagyunk arra, hogy termékeink hozzájárulnak a fenntartható
+                csomagolási megoldások elterjedéséhez Magyarországon.
+            </p>
+            <p data-lang="aboutp4">
+                Legyen szó webáruházakról, logisztikai központokról,
+                gyártóvállalatokról vagy kézműves vállalkozásokról,
+                partnereink számára olyan csomagolóanyagot kínálunk,
+                amely egyszerre nyújt kiváló védelmet, esztétikus
+                megjelenést és környezettudatos választást.
+            </p>
+            <blockquote class="aboutQuote" data-lang="aboutq">
+                „Hiszünk abban, hogy a modern csomagolás nemcsak biztonságos,
+                hanem fenntartható is lehet.”
+            </blockquote>
+            <p class="thanks" data-lang="aboutp5">
+                Köszönjük minden partnerünknek és támogatónknak, hogy
+                hozzájárultak vállalkozásunk fejlődéséhez.
+            </p>
+            <p class="specialThanks" data-lang="aboutp6">
+                Külön köszönet Marosi Nikolettának (Vecsés),
+                aki a kezdeti nehéz időszakban önzetlen segítségével támogatta
+                vállalkozásunkat.
+            </p>
+            <div class="signature">
+                <strong data-lang="aboutsign">Air Pack Hungary Kft. csapata</strong>
+            </div>
+        </div>
+        <div class="aboutImage">
+            <div class="imageWrapper">
+                <img src="tablahun.png" alt="Air Pack Hungary" id="aboutIMG">
+                <div class="boardText" id="visitorCount">
+                    123
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact" id="contact">
+        <span class="sectionMini" data-lang="conmini">
+            ELÉRHETŐSÉG
+        </span>
+        <h2 data-lang="conh2">
+            Kapcsolat
+        </h2>
+        <div class="contactContainer">
+            <div class="contactBox">
+                <h3>Email</h3>
+                <p>airpack.h@gmail.com</p>
+            </div>
+            <div class="contactBox">
+                <h3 data-lang="contel">Telefon</h3>
+                <p>+36 70 366 4848</p>
+            </div>
+            <div class="contactBox">
+                <h3 data-lang="conloc">Telephely</h3>
+                <p>5622 Köröstarcsa,<br>Kossuth Lajos utca 39.</p>
+            </div>
+            <div class="contactBox">
+                <h3 data-lang="confol">Kövessen minket</h3>
+                <div class="socialLinks">
+                    <a href="https://www.facebook.com/profile.php?id=61580764942917" target="_blank">
+                        Facebook
+                    </a>
+                    <a href="https://www.instagram.com/air_pack_hungary_kft/" target="_blank">
+                        Instagram
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <footer>
+        © 2026 Air Pack Hungary Kft
+    </footer>
+</body>
+<script src="translation.js"></script>
+<script src="popup.js"></script>
+<script>
+    const menu = document.getElementById("navMenu");
+    const toggle = document.getElementById("menuToggle");
+
+    toggle.addEventListener("click", () => {
+
+        menu.classList.toggle("active");
+        toggle.classList.toggle("active");
+
+    });
+
+    document.querySelectorAll("#navMenu a").forEach(link => {
+        link.addEventListener("click", () => {
+            toggle.classList.toggle("active");
+        });
+    });
+    document.querySelectorAll("#navMenu a").forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            menu.classList.remove("active");
+            toggle.classList.remove("active");
+
+        });
+
+    });
+
+
+    /*szamlalo*/
+    fetch("IDE_MÁSOLÓDIK_A_SCRIPT_URL")
+        .then(response => response.json())
+        .then(data => {
+
+            document.getElementById("visitorCount").innerHTML =
+                Number(data.visitors).toLocaleString("hu-HU");
+
+        });
+
+</script>
+
+</html>
