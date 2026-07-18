@@ -162,7 +162,66 @@ section{
 .menu-toggle.active span:nth-child(3){
     transform:translateY(-9px) rotate(-45deg);
 }
+.hero-content{
+    position:absolute;
+    top:50%;
+    left:8%;
+    transform:translateY(-50%);
+    z-index:2;
+    color:#fff;
+}
 
+.hero-subtitle{
+    display:block;
+    font-size:16px;
+    letter-spacing:5px;
+    text-transform:uppercase;
+    margin-bottom:18px;
+    opacity:.9;
+}
+
+.hero-content h1{
+    font-family:'Cormorant Garamond', serif;
+    font-size:78px;
+    line-height:.95;
+    font-weight:700;
+    margin-bottom:40px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:20px;
+}
+
+.btn-primary,
+.btn-secondary{
+    text-decoration:none;
+    padding:16px 36px;
+    border-radius:50px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn-primary{
+    background:#d47d2f;
+    color:#fff;
+}
+
+.btn-primary:hover{
+    background:#b96822;
+    cursor: pointer;
+}
+
+.btn-secondary{
+    border:2px solid #fff;
+    color:#fff;
+}
+
+.btn-secondary:hover{
+    background:#fff;
+    color:#222;
+    cursor: pointer;
+}
 /*----PRODUCT----*/
 
 .products{

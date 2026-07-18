@@ -20,6 +20,28 @@
     .wave {
         height: 120px;
     }
+     .hero-content{
+        left:6%;
+    }
+
+    .hero-content h1{
+        font-size:64px;
+    }
+
+    .hero-subtitle{
+        font-size:14px;
+        letter-spacing:4px;
+    }
+
+    .hero-buttons{
+        gap:15px;
+    }
+
+    .btn-primary,
+    .btn-secondary{
+        padding:14px 30px;
+    }
+
 }
 
 @media (max-width:768px) {
@@ -89,6 +111,38 @@
     .wave {
         height: 90px;
     }
+    .hero-content{
+        left:5%;
+        right:5%;
+        text-align:center;
+    }
+
+
+    .hero-content h1{
+        font-size:52px;
+        line-height:1;
+        margin-bottom:30px;
+    }
+
+
+    .hero-subtitle{
+        font-size:13px;
+        letter-spacing:3px;
+        margin-bottom:15px;
+    }
+
+
+    .hero-buttons{
+        justify-content:center;
+        flex-wrap:wrap;
+    }
+
+
+    .btn-primary,
+    .btn-secondary{
+        padding:13px 28px;
+        font-size:15px;
+    }
 }
 
 @media (max-width:576px) {
@@ -135,6 +189,39 @@
     .wave {
         height: 70px;
     }
+    .hero-content{
+        left:20px;
+        right:20px;
+    }
+
+
+    .hero-content h1{
+        font-size:42px;
+        line-height:1.05;
+        margin-bottom:25px;
+    }
+
+
+    .hero-subtitle{
+        font-size:12px;
+        letter-spacing:2px;
+    }
+
+
+    .hero-buttons{
+        flex-direction:column;
+        align-items:center;
+        gap:12px;
+    }
+
+
+    .btn-primary,
+    .btn-secondary{
+        width:200px;
+        text-align:center;
+        padding:14px 20px;
+    }
+
 }
 
 @media (max-width:400px) {
@@ -175,6 +262,29 @@
 
     .wave {
         height: 55px;
+    }
+     .hero-content{
+        left:15px;
+        right:15px;
+    }
+
+
+    .hero-content h1{
+        font-size:36px;
+    }
+
+
+    .hero-subtitle{
+        font-size:11px;
+        letter-spacing:2px;
+    }
+
+
+    .btn-primary,
+    .btn-secondary{
+        width:180px;
+        font-size:14px;
+        padding:12px 18px;
     }
 }
 
@@ -312,7 +422,7 @@
 }
 
 /*----ABOUT----*/
-@media(max-width:900px) {
+@media(max-width:1025px) {
     .about {
         flex-direction: column;
         gap: 50px;
@@ -324,12 +434,15 @@
         order: -1;
         width: 100%;
     }
-
+    .about .imageWrapper{
+        width: 70%;
+    }
     .aboutImage img {
         width: 100%;
         max-width: 600px;
         height: 450px;
         border-radius: 50px;
+        min-height: 600px;
     }
 
     .aboutText {
@@ -394,7 +507,7 @@
 }
 
 /*----CONTACT----*/
-@media(max-width:1024px) {
+@media(max-width:1200px) {
     .contactContainer {
         grid-template-columns: repeat(2, 1fr);
         gap: 30px;
