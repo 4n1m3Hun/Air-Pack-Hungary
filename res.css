@@ -25,12 +25,12 @@
     }
 
     .hero-content h1{
-        font-size:64px;
+        font-size:14px;
+        letter-spacing:4px;
     }
 
     .hero-subtitle{
-        font-size:14px;
-        letter-spacing:4px;
+        font-size:64px;
     }
 
     .hero-buttons{
@@ -119,16 +119,16 @@
 
 
     .hero-content h1{
-        font-size:52px;
-        line-height:1;
-        margin-bottom:30px;
+        font-size:13px;
+        letter-spacing:3px;
+        margin-bottom:15px;
     }
 
 
     .hero-subtitle{
-        font-size:13px;
-        letter-spacing:3px;
-        margin-bottom:15px;
+        font-size:52px;
+        line-height:1;
+        margin-bottom:30px;
     }
 
 
@@ -196,15 +196,15 @@
 
 
     .hero-content h1{
-        font-size:42px;
-        line-height:1.05;
-        margin-bottom:25px;
+        font-size:12px;
+        letter-spacing:2px;
     }
 
 
     .hero-subtitle{
-        font-size:12px;
-        letter-spacing:2px;
+        font-size:42px;
+        line-height:1.05;
+        margin-bottom:25px;
     }
 
 
@@ -270,13 +270,13 @@
 
 
     .hero-content h1{
-        font-size:36px;
+        font-size:11px;
+        letter-spacing:2px;
     }
 
 
     .hero-subtitle{
-        font-size:11px;
-        letter-spacing:2px;
+        font-size:36px;
     }
 
 
